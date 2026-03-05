@@ -1,0 +1,122 @@
+body {
+	font-family: 'Inter', sans-serif;
+}
+
+/* Panel con efecto vidrio */
+.glass-panel {
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+/* Animacion suave para entrada de elementos */
+.fade-in {
+	animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* Paleta principal: guinda + crema suave */
+:root {
+	--guinda-900: #4a0d24;
+	--guinda-800: #6d1234;
+	--guinda-700: #861943;
+	--guinda-600: #a12553;
+	--guinda-500: #ba3a67;
+	--crema-50: #fffaf0;
+	--crema-100: #fdf2df;
+	--texto-principal: #3f1023;
+	--texto-secundario: #6c3550;
+}
+
+body {
+	background-color: var(--crema-50);
+	color: var(--texto-principal);
+}
+
+/* Re-map de utilidades Tailwind usadas en la UI */
+.bg-slate-900 { background-color: var(--guinda-900) !important; }
+.bg-slate-800 { background-color: var(--guinda-800) !important; }
+.bg-slate-700 { background-color: var(--guinda-700) !important; }
+.bg-slate-100 { background-color: var(--crema-100) !important; }
+.bg-slate-50 { background-color: var(--crema-50) !important; }
+
+.text-slate-900 { color: var(--texto-principal) !important; }
+.text-slate-800 { color: #56162f !important; }
+.text-slate-700 { color: var(--texto-secundario) !important; }
+.text-slate-600 { color: #7d415d !important; }
+.text-slate-500 { color: #925772 !important; }
+.text-slate-400 { color: #aa7490 !important; }
+.text-slate-300 { color: #c79bb0 !important; }
+
+.border-slate-700 { border-color: #8a3154 !important; }
+.border-slate-300 { border-color: #e8bfd0 !important; }
+.border-slate-200 { border-color: #efd1dd !important; }
+.border-slate-100 { border-color: #f4deea !important; }
+
+.ring-slate-300 { --tw-ring-color: #e8bfd0 !important; }
+.ring-slate-200 { --tw-ring-color: #efd1dd !important; }
+
+/* Accentos amber -> guinda */
+.text-amber-800,
+.text-amber-700,
+.text-amber-600,
+.text-amber-500 { color: var(--guinda-700) !important; }
+
+.bg-amber-500 { background-color: var(--guinda-700) !important; }
+.bg-amber-50 { background-color: var(--crema-100) !important; }
+
+.border-amber-500,
+.hover\:border-amber-200:hover { border-color: #c76b8f !important; }
+
+.focus\:ring-amber-500:focus { --tw-ring-color: var(--guinda-600) !important; }
+.focus\:border-amber-500:focus { border-color: var(--guinda-600) !important; }
+
+/* Clases de color adicionales usadas por estados/filtros */
+.bg-blue-50,
+.bg-green-100,
+.bg-purple-100,
+.bg-pink-100 { background-color: var(--crema-100) !important; }
+
+.text-blue-800,
+.text-green-800,
+.text-purple-800,
+.text-pink-800 { color: var(--guinda-700) !important; }
+
+.border-blue-200,
+.border-green-200,
+.border-purple-200,
+.border-pink-200 { border-color: #e8bfd0 !important; }
+
+.bg-blue-500,
+.bg-green-500,
+.bg-purple-500,
+.bg-pink-500 { background-color: var(--guinda-500) !important; }
+
+/* Componentes propios */
+.search-highlight {
+	background-color: #f4d4e0;
+	color: #5a1430;
+	padding: 0 2px;
+	border-radius: 2px;
+	font-weight: 600;
+}
+
+.badge-federal,
+.badge-cuu,
+.badge-gua,
+.badge-hid,
+.badge-cdmx {
+	background-color: var(--crema-100);
+	color: var(--guinda-700);
+	border: 1px solid #e8bfd0;
+}
+
+.highlight-gap,
+.highlight-contradiction {
+	background-color: #fbebf1;
+	border-left: 4px solid var(--guinda-600);
+}
